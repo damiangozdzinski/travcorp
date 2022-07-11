@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+
+// * Components * //
+import Header from "./components/Header";
+import Trips from "./components/Trips";
+import NotFound from "./components/NotFound";
+
+// * Helpers * //
+import { dataGetter } from "./helpers/dataGetter";
 
 function App() {
+  const [ travels, setTravels ] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const { travels } = await dataGetter("http://localhost:5003/travels-data");
+      console.log("data", travels);
+      setTravels(travels);
+    })();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      {travels && travels.length ? (
+        <Trips travels={travels} />
+      ) : (
+        <NotFound />
+      )}
+    </main>
   );
 }
 
