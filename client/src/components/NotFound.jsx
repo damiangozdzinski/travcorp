@@ -1,5 +1,5 @@
 const NotFound = () => (
-  <section>
+  <section className="data-container">
     Data not found
   </section>
 );
