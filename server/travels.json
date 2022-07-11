@@ -1,0 +1,52 @@
+{
+  "travels": [
+    {
+      "id": 1,
+      "coverImage": "https://via.placeholder.com/420x230.png?",
+      "title" : "European Quest",
+      "duration": 25,
+      "countries": [
+        "Poland",
+        "Germany",
+        "Nederlands",
+        "Belgium",
+        "Sweden",
+        "Finland"
+      ],
+      "score": 4.6,
+      "price": {
+        "from": 2877,
+        "discount": 3385
+      }
+    },
+    {
+      "id": 2,
+      "coverImage": "https://via.placeholder.com/420x230.png?",
+      "title" : "Simply Italy",
+      "duration": 15,
+      "countries": [
+        "Poland",
+        "Germany"
+      ],
+      "score": 4.4,
+      "price": {
+        "from": 1832,
+        "discount": 2155
+      }
+    },
+    {
+      "id": 3,
+      "coverImage": "https://via.placeholder.com/420x230.png?",
+      "title" : "Italian Espresso",
+      "duration": 10,
+      "countries": [
+        "Italy"
+      ],
+      "score": 4.5,
+      "price": {
+        "from": 1245,
+        "discount": 1465
+      }
+    }
+  ]
+}

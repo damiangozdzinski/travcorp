@@ -14,7 +14,6 @@ function App() {
   useEffect(() => {
     (async () => {
       const { travels } = await dataGetter("http://localhost:5003/travels-data");
-      console.log("data", travels);
       setTravels(travels);
     })();
   }, []);

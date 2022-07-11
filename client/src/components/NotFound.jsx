@@ -1,6 +1,6 @@
 const NotFound = () => (
   <section>
-    Not Found
+    Data not found
   </section>
 );
 

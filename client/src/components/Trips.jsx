@@ -28,7 +28,7 @@ const Trips = ({ travels }) => {
 };
 
 Trips.propTypes = {
-  travels: PropTypes.object
+  travels: PropTypes.array.isRequired
 };
 
 export default Trips;
